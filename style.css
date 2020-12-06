@@ -1,0 +1,288 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f1f3f6;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 0;
+}
+.box {
+  /* background-image: url(img/img.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+  background-repeat: no-repeat;
+
+////////////// */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: url(img/img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+}
+
+.topMenu {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+.headerBox {
+  padding-top: 20px;
+  color: white;
+}
+.titleInfo {
+  margin-top: 150px;
+}
+
+.titleText {
+  width: 429px;
+  color: white;
+}
+.titleInfo > button {
+  margin-top: 40px;
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.userPanel {
+  display: flex;
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.log {
+  border: none;
+  background: none;
+  color: white;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  background: none;
+}
+.getStart {
+  width: 120px;
+  height: 40px;
+  border: solid 2px white;
+  color: white;
+  background: none;
+}
+.containerInfo {
+  width: 100%;
+}
+.infoBox {
+  display: flex;
+  width: 90%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: white;
+  margin-left: auto;
+  justify-content: space-around;
+  margin-top: -250px;
+}
+.infoBlock {
+  width: 280px;
+}
+.infoBlock > img {
+  margin-top: 60px;
+}
+.infoBlock > p {
+  line-height: 1.5;
+}
+.footer {
+  height: 400px;
+  background: linear-gradient(#bbb, transparent 1px),
+    linear-gradient(90deg, #bbb, transparent 1px);
+  background-size: 244px 100%;
+  background-position: center center;
+  margin-left: auto;
+  width: 90%;
+}
+.contentFooter {
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerTitle {
+  width: 220px;
+}
+.footerText {
+  width: 426px;
+  line-height: 2;
+}
+
+/* ////////////////////////Mobile */
+
+.mobileMenu {
+  margin-left: auto;
+  display: none;
+}
+.navMenuMob {
+  background-color: black;
+}
+
+@media (max-width: 1200px) {
+  .topMenu {
+    position: fixed;
+    width: 80%;
+    background-color: rgb(0, 0, 0, 0.8);
+  }
+  .menu {
+    display: none;
+  }
+  .userPanel {
+    display: none;
+  }
+  .below {
+    margin-top: 0px;
+  }
+  .below > h1 {
+    font-size: 50px;
+  }
+  .topMenu > h2 {
+    font-size: 40px;
+  }
+  .getStart {
+    width: auto;
+  }
+  .log {
+    width: auto;
+  }
+  .mobileMenu {
+    display: block;
+    margin-top: -7px;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  .navMenuMob {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .titleInfo > h1 {
+    font-size: 40px;
+  }
+
+  .infoBox {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .infoBlock {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .titleInfo > h1 {
+    font-size: 30px;
+  }
+  .contentFooter {
+    flex-flow: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .titleText {
+    width: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .titleInfo > h1 {
+    font-size: 30px;
+  }
+  .mobileMenu {
+    margin-top: 0;
+    margin-top: 80px;
+    margin-left: -140px;
+  }
+}
+@media (max-width: 320px) {
+  .titleInfo > h1 {
+    font-size: 30px;
+  }
+}
+
+.mobileMenu > nav > li {
+  height: 40px;
+  color: white;
+  margin-left: 0;
+  cursor: pointer;
+}
+.mobileMenuIcon {
+  position: relative;
+  width: 29px;
+  height: 7px;
+  background-color: darkorange;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.mobileMenu > nav {
+  margin-left: 15px;
+  width: 100%;
+  font-size: 20px;
+  padding: 30px 30px 20px 30px;
+}
+
+.mobileMenuIcon::after {
+  position: absolute;
+  content: "";
+  width: 29px;
+  height: 7px;
+  border-radius: 50px;
+  background-color: darkorange;
+  top: 10px;
+  display: block;
+  left: 0;
+}
+.mobileMenuIcon::before {
+  position: absolute;
+  content: "";
+  width: 29px;
+  height: 7px;
+  border-radius: 50px;
+  background-color: darkorange;
+  top: -10px;
+  display: block;
+  left: 0;
+}
+.ACTIVE {
+  display: block;
+}
